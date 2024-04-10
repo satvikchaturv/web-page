@@ -15,6 +15,7 @@ async function main() {
   console.log(`A contract with balance of ${initBalance} eth deployed to ${assessment.address}`);
 }
 
+
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
 main().catch((error) => {
