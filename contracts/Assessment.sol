@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-//import "hardhat/console.sol";
-
 contract Assessment {
     address payable public owner;
     uint256 public balance;
@@ -56,5 +54,15 @@ contract Assessment {
 
         // emit the event
         emit Withdraw(_withdrawAmount);
+    }
+    
+    function checkDob(string memory _dob) public pure returns (bool) {
+        // Check if provided date of birth matches a predefined value
+        return keccak256(abi.encodePacked(_dob)) == keccak256("06-08-2023");
+    }
+    
+    function changeFontStyle(string memory _fontStyle) public pure returns (string memory) {
+        // Return the updated font style
+        return _fontStyle;
     }
 }
